@@ -1,5 +1,20 @@
 <template>
-  <div class="home">
+
+<div class="container-fluid pt70 pb70">
+			<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
+				<div class="fh5co-project masonry-brick" v-for="movie in movies">
+					<router-link v-bind:to="'/movies/' + movie.id">
+						<img v-bind:src="movie.image_url" alt="">
+						<h2>{{ movie.title }}</h2>
+						<small>{{ movie.year }}</small>
+					</router-link>
+				</div>
+			</div> -->
+			<!--END .fh5co-projects-feed-->
+		</div>
+		<!-- END .container-fluid -->
+
+  <!-- <div class="home">
 
     <h1>{{ message }}</h1>
 
@@ -13,7 +28,7 @@
     	</div>
     </div>
 
-  </div>
+  </div> -->
 </template>
 
 <style>
