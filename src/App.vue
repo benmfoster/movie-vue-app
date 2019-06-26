@@ -10,6 +10,9 @@
 					<ul>
 						<li><router-link to="/">Home</router-link></li>
 						<li><router-link to="/movies/new">New Movie</router-link></li>
+						<li v-if="!Loggedin()"><router-link to="/signup">Signup</router-link></li>
+						<li v-if="!Loggedin()"><router-link to="/login">Login</router-link></li>
+						<li v-if="!Loggedin()"><router-link to="/logout">Logout</router-link></li>
 					</ul>
 				</nav>
 			</div>
@@ -35,3 +38,14 @@
 
 <style>
 </style>
+
+<script>
+export default {
+	methods: {
+  isLoggedIn: function() {
+    return localStorage.getItem('jwt');
+  }
+}
+}
+</script>
+
