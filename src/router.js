@@ -8,6 +8,7 @@ import MoviesEdit from './views/MoviesEdit.vue'
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
+import ActorsIndex from "./views/ActorsIndex.vue";
 
 
 Vue.use(Router)
@@ -16,11 +17,11 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: Home
-    // },
+    {
+      path: '/actors',
+      name: 'actors-index',
+      component: ActorsIndex
+    },
     {
       path: '/',
       name: 'movies-index',
